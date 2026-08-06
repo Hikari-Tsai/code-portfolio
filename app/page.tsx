@@ -68,17 +68,16 @@ const experience = [
 ];
 
 const certifications = [
-  "AWS Certified Data Analytics - Specialty",
-  "Optimize ML Models and Deploy Human-in-the-Loop Pipelines",
-  "Agile Project Management with Jira Cloud: 1 Projects, Boards, and Issues",
-  "Agile Project Management with Jira Cloud: 2 Lean and Agile Processes",
-  "Agile Project Management with Jira Cloud: 3 Advanced Topics",
+  "AWS Certified Data Analytics – Specialty",
+  "AWS Certified Machine Learning – Specialty",
+  "AWS Certified Solutions Architect – Associate",
 ];
 
 const awards = [
-  ["No. 6", "Music Genesis"],
-  ["Top 10", "Ho-hai-yan Rock Festival"],
-  ["Excellent Prize ×3", "Award records listed in resume"],
+  ["2024", "National Dong Hwa University Distinguished Alumnus"],
+  ["2023", "1st TAICCA Cultural Entrepreneurship Accelerator"],
+  ["2022", "CES Innovation Award"],
+  ["2021", "Taiwan Excellence Award"],
 ];
 
 export default function Home() {
