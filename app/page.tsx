@@ -67,6 +67,20 @@ const experience = [
   },
 ];
 
+const certifications = [
+  "AWS Certified Data Analytics - Specialty",
+  "Optimize ML Models and Deploy Human-in-the-Loop Pipelines",
+  "Agile Project Management with Jira Cloud: 1 Projects, Boards, and Issues",
+  "Agile Project Management with Jira Cloud: 2 Lean and Agile Processes",
+  "Agile Project Management with Jira Cloud: 3 Advanced Topics",
+];
+
+const awards = [
+  ["No. 6", "Music Genesis"],
+  ["Top 10", "Ho-hai-yan Rock Festival"],
+  ["Excellent Prize ×3", "Award records listed in resume"],
+];
+
 export default function Home() {
   return (
     <main>
@@ -78,6 +92,7 @@ export default function Home() {
         <nav aria-label="主要導覽">
           <a href="#work">作品</a>
           <a href="#skills">技能</a>
+          <a href="#credentials">成就</a>
           <a href="#contact">合作</a>
         </nav>
         <div className="status"><i /> AVAILABLE</div>
@@ -128,9 +143,34 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="credentials shell" id="credentials">
+        <div className="section-head">
+          <div className="section-label"><span>04</span> AWARDS & CERTIFICATIONS</div>
+          <p>專業能力與創作成果。</p>
+        </div>
+        <div className="credentials-layout">
+          <div className="credential-column awards-column">
+            <div className="credential-title"><span>A</span><h2>HONORS<br />& AWARDS</h2></div>
+            <div className="award-list">
+              {awards.map(([rank, event], index) => (
+                <article key={`${rank}-${event}`}><small>0{index + 1}</small><strong>{rank}</strong><p>{event}</p></article>
+              ))}
+            </div>
+          </div>
+          <div className="credential-column cert-column">
+            <div className="credential-title"><span>C</span><h2>CERTIFI-<br />CATIONS</h2></div>
+            <ol>
+              {certifications.map((certification, index) => (
+                <li key={certification}><span>0{index + 1}</span><p>{certification}</p></li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
+
       <section className="work shell" id="work">
         <div className="section-head">
-          <div className="section-label"><span>04</span> SELECTED WORK</div>
+          <div className="section-label"><span>05</span> SELECTED WORK</div>
           <p>實作中的技術，才有價值。</p>
         </div>
         <div className="project-list">
@@ -151,7 +191,7 @@ export default function Home() {
       </section>
 
       <section className="skills shell" id="skills">
-        <div className="section-label light"><span>05</span> CAPABILITIES</div>
+        <div className="section-label light"><span>06</span> CAPABILITIES</div>
         <div className="skills-intro">
           <h2>FROM IDEA<br />TO <i>WORKING</i><br />SYSTEM.</h2>
           <p>跨越 AI、軟體與創作者生態，把模糊需求整理成能上線、能維護、能成長的產品。</p>
@@ -164,7 +204,7 @@ export default function Home() {
       </section>
 
       <section className="contact shell" id="contact">
-        <div className="section-label"><span>06</span> START A CONVERSATION</div>
+        <div className="section-label"><span>07</span> START A CONVERSATION</div>
         <h2>有一個值得實現的<br /><span>IDEA?</span></h2>
         <p>目前開放軟體開發、AI 整合、創作者工具與技術顧問合作。</p>
         <div className="contact-links">
