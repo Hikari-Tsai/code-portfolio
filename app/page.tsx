@@ -72,6 +72,12 @@ const experience = [
     tags: ["Music Generation", "Symbolic Music", "Multi-track"],
   },
   {
+    code: "SVS",
+    title: "SVS 歌聲合成",
+    description: "開發 Singing Voice Synthesizer，涵蓋資料準備、模型訓練、系統開發與實際應用；曾與 Kimberly、黃明志、芒果醬、VERBAL（m-flo）及 VTuber 多帕合作。",
+    tags: ["Singing Voice", "Model Training", "Artist Collaboration"],
+  },
+  {
     code: "E_COMMERCE",
     title: "OpenCart 電商與金流",
     description: "以 OpenCart 為核心架設購物車網站與金流系統，開發客製化電商模組，串接交易、物流與後台營運流程。",
