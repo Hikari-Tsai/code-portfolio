@@ -7,7 +7,7 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 const title = "Hikari Tsai — AI Engineer & Creative Technologist";
-const description = "Hikari Tsai 的個人作品集：生成式 AI、創作者工具、社群自動化、電商整合與音訊技術。開放求職與專案合作。";
+const description = "Hikari Tsai 的個人作品集：Physics AI（PINN / PhysicsNeMo）、RAG、AIoT 智慧音箱、生成式 AI 與創作者工具。開放求職與專案合作。";
 
 export async function generateMetadata(): Promise<Metadata> {
   const requestHeaders = await headers();

@@ -38,11 +38,33 @@ const projects = [
 ];
 
 const skills = [
-  ["AI ENGINEERING", "LLM 應用、結構化輸出、AI Agent、機器學習"],
+  ["AI ENGINEERING", "PINN、PhysicsNeMo、RAG、LLM 應用、AI Agent、機器學習"],
   ["CREATOR SYSTEMS", "VTuber 工具、社群內容流程、Discord / Twitch Bot"],
   ["WEB & AUTOMATION", "TypeScript、JavaScript、Python、GitHub Actions"],
   ["COMMERCE", "OpenCart 擴充、金流串接、營運自動化"],
   ["AUDIO TECH", "C++、Swift、macOS、音訊外掛與 DSP 實驗"],
+  ["AIoT", "智慧音箱、AI 服務整合、連網裝置與互動體驗"],
+];
+
+const experience = [
+  {
+    code: "PHY_AI",
+    title: "Physics AI 開發",
+    description: "運用物理資訊神經網路（PINN）與 NVIDIA PhysicsNeMo，將物理定律融入模型訓練與科學運算。",
+    tags: ["PINN", "PhysicsNeMo", "Scientific ML"],
+  },
+  {
+    code: "KNOWLEDGE",
+    title: "RAG 系統開發",
+    description: "建置檢索增強生成流程，串接知識庫、語意搜尋與大型語言模型，提升回答的準確性與可追溯性。",
+    tags: ["RAG", "Vector Search", "LLM"],
+  },
+  {
+    code: "EDGE_AI",
+    title: "AIoT 智慧音箱",
+    description: "整合 AI 服務、語音互動與連網裝置，開發智慧音箱應用，串連雲端智能與真實世界體驗。",
+    tags: ["AIoT", "Voice UX", "Smart Speaker"],
+  },
 ];
 
 export default function Home() {
@@ -89,9 +111,26 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="experience shell" aria-label="AI 開發經歷">
+        <div className="section-head">
+          <div className="section-label"><span>03</span> APPLIED AI EXPERIENCE</div>
+          <p>從模型、知識到裝置端。</p>
+        </div>
+        <div className="experience-grid">
+          {experience.map((item, index) => (
+            <article key={item.code}>
+              <div className="experience-meta"><span>0{index + 1}</span><small>{item.code}</small></div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <ul>{item.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="work shell" id="work">
         <div className="section-head">
-          <div className="section-label"><span>03</span> SELECTED WORK</div>
+          <div className="section-label"><span>04</span> SELECTED WORK</div>
           <p>實作中的技術，才有價值。</p>
         </div>
         <div className="project-list">
@@ -112,7 +151,7 @@ export default function Home() {
       </section>
 
       <section className="skills shell" id="skills">
-        <div className="section-label light"><span>04</span> CAPABILITIES</div>
+        <div className="section-label light"><span>05</span> CAPABILITIES</div>
         <div className="skills-intro">
           <h2>FROM IDEA<br />TO <i>WORKING</i><br />SYSTEM.</h2>
           <p>跨越 AI、軟體與創作者生態，把模糊需求整理成能上線、能維護、能成長的產品。</p>
@@ -125,7 +164,7 @@ export default function Home() {
       </section>
 
       <section className="contact shell" id="contact">
-        <div className="section-label"><span>05</span> START A CONVERSATION</div>
+        <div className="section-label"><span>06</span> START A CONVERSATION</div>
         <h2>有一個值得實現的<br /><span>IDEA?</span></h2>
         <p>目前開放軟體開發、AI 整合、創作者工具與技術顧問合作。</p>
         <div className="contact-links">
