@@ -61,9 +61,9 @@ const experience = [
   },
   {
     code: "EDGE_AI",
-    title: "AIoT 智慧音箱",
-    description: "整合 AI 服務、語音互動與連網裝置，開發智慧音箱應用，串連雲端智能與真實世界體驗。",
-    tags: ["AIoT", "Voice UX", "Smart Speaker"],
+    title: "CES 獲獎 AIoT 智慧音箱",
+    description: "開發 CES Innovation Award 獲獎智慧音箱，透過 AI 偵測與識別嬰兒哭聲，判斷需求並觸發對應的裝置動作與照護回應。",
+    tags: ["CES Award", "Cry Recognition", "Smart Speaker"],
   },
   {
     code: "MUSIC_GEN",
@@ -73,9 +73,9 @@ const experience = [
   },
   {
     code: "E_COMMERCE",
-    title: "電商與金流開發",
-    description: "架設購物車網站與金流系統，並依營運需求開發購物網站模組，串接交易與後台作業流程。",
-    tags: ["E-commerce", "Payment", "OpenCart"],
+    title: "OpenCart 電商與金流",
+    description: "以 OpenCart 為核心架設購物車網站與金流系統，開發客製化電商模組，串接交易、物流與後台營運流程。",
+    tags: ["OpenCart", "Payment Gateway", "E-commerce Module"],
   },
 ];
 
