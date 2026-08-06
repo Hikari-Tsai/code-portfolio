@@ -65,6 +65,18 @@ const experience = [
     description: "整合 AI 服務、語音互動與連網裝置，開發智慧音箱應用，串連雲端智能與真實世界體驗。",
     tags: ["AIoT", "Voice UX", "Smart Speaker"],
   },
+  {
+    code: "MUSIC_GEN",
+    title: "Music Gen 模型",
+    description: "開發符號表象音樂生成模型，自動創作具結構的音樂內容，並支援後續編輯與多軌分軌工作流。",
+    tags: ["Music Generation", "Symbolic Music", "Multi-track"],
+  },
+  {
+    code: "E_COMMERCE",
+    title: "電商與金流開發",
+    description: "架設購物車網站與金流系統，並依營運需求開發購物網站模組，串接交易與後台作業流程。",
+    tags: ["E-commerce", "Payment", "OpenCart"],
+  },
 ];
 
 const certifications = [
