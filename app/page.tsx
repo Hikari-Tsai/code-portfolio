@@ -124,7 +124,7 @@ const visuals = [
   ["visual-creator-music.svg", "創作者工具與音樂系統視覺圖"],
 ];
 
-const assetBasePath = process.env.GITHUB_PAGES === "true" ? "/hikari-tsai-portfolio" : "";
+const assetBasePath = process.env.GITHUB_PAGES === "true" ? "/code-portfolio" : "";
 
 export default function Home() {
   return (
