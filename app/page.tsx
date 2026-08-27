@@ -106,9 +106,21 @@ const experience = [
 ];
 
 const certifications = [
-  "AWS Certified Data Analytics – Specialty",
-  "AWS Certified Machine Learning – Specialty",
-  "AWS Certified Solutions Architect – Associate",
+  {
+    name: "AWS Certified Solutions Architect – Associate",
+    badgeUrl: "https://www.credly.com/badges/406f8ed0-c2f1-48b9-8fef-21bac421a9e8/public_url",
+    imageUrl: "https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/linkedin_thumb_image.png",
+  },
+  {
+    name: "AWS Certified Machine Learning – Specialty",
+    badgeUrl: "https://www.credly.com/badges/b3d97b71-ae01-41a0-bb13-a3bfd11a27ec/public_url",
+    imageUrl: "https://images.credly.com/images/778bde6c-ad1c-4312-ac33-2fa40d50a147/linkedin_thumb_image.png",
+  },
+  {
+    name: "AWS Certified Data Analytics – Specialty",
+    badgeUrl: "https://www.credly.com/badges/354046b5-a2fb-4f22-92a9-eb032d9e1d16/public_url",
+    imageUrl: "https://images.credly.com/images/6430efe4-0ac0-4df6-8f1b-9559d8fcdf27/linkedin_thumb_image.png",
+  },
 ];
 
 const awards = [
@@ -220,11 +232,29 @@ export default function Home() {
           </div>
           <div className="credential-column cert-column">
             <div className="credential-title"><span>C</span><h2>CERTIFI-<br />CATIONS</h2></div>
-            <ol>
+            <div className="cert-grid">
               {certifications.map((certification, index) => (
-                <li key={certification}><span>0{index + 1}</span><p>{certification}</p></li>
+                <a
+                  className="cert-card"
+                  href={certification.badgeUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`在 Credly 驗證 ${certification.name}`}
+                  key={certification.name}
+                >
+                  <span className="cert-index">0{index + 1}</span>
+                  <Image
+                    src={certification.imageUrl}
+                    alt={`${certification.name} 證書徽章`}
+                    width={150}
+                    height={150}
+                    unoptimized
+                  />
+                  <p>{certification.name}</p>
+                  <small>VERIFY ON CREDLY ↗</small>
+                </a>
               ))}
-            </ol>
+            </div>
           </div>
         </div>
       </section>
