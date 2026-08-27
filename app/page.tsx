@@ -144,6 +144,16 @@ export default function Home() {
       </header>
 
       <section className="hero shell" id="top">
+        <Image
+          className="hero-banner"
+          src={`${assetBasePath}/hikari-tech-banner.webp`}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          aria-hidden="true"
+          unoptimized
+        />
         <div className="eyebrow"><span>01</span> CREATOR · ENGINEER · BUILDER</div>
         <h1>
           I BUILD <em>INTELLIGENT</em>
