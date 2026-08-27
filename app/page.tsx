@@ -12,6 +12,15 @@ const projects = [
   },
   {
     index: "02",
+    name: "rag",
+    type: "PRIVATE KNOWLEDGE AI",
+    description:
+      "企業知識檢索增強生成系統，整合文件處理、語意搜尋與 LLM 回答流程，將內部資料轉化為可追溯的 AI 問答體驗。",
+    stack: ["Python", "RAG", "LLM"],
+    visibility: "PRIVATE REPO",
+  },
+  {
+    index: "03",
     name: "dc-manager",
     type: "AI × DISCORD",
     description:
@@ -20,7 +29,7 @@ const projects = [
     href: "https://github.com/Hikari-Tsai/dc-manager",
   },
   {
-    index: "03",
+    index: "04",
     name: "twitch-bot",
     type: "CREATOR AI",
     description:
@@ -29,7 +38,7 @@ const projects = [
     href: "https://github.com/Hikari-Tsai/twitch-bot",
   },
   {
-    index: "04",
+    index: "05",
     name: "opencart-newebpay",
     type: "COMMERCE",
     description:
@@ -38,7 +47,7 @@ const projects = [
     href: "https://github.com/Hikari-Tsai/opencart-newebpay",
   },
   {
-    index: "05",
+    index: "06",
     name: "JS_Inflator",
     type: "AUDIO TECH",
     description:
