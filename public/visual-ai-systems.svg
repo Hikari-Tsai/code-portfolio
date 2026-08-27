@@ -1,0 +1,21 @@
+<svg width="900" height="560" viewBox="0 0 900 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AI systems visual</title>
+  <desc id="desc">Abstract interface diagram for RAG, agents, and structured AI workflows.</desc>
+  <rect width="900" height="560" fill="#080B0A"/>
+  <path d="M60 78H840M60 482H840M112 44V516M788 44V516" stroke="#C8FF24" stroke-opacity=".35" stroke-width="2"/>
+  <rect x="90" y="100" width="300" height="132" fill="#E8E8DF"/>
+  <rect x="118" y="130" width="132" height="16" fill="#080B0A"/>
+  <rect x="118" y="164" width="214" height="8" fill="#080B0A" fill-opacity=".55"/>
+  <rect x="118" y="188" width="176" height="8" fill="#080B0A" fill-opacity=".35"/>
+  <rect x="510" y="100" width="300" height="132" fill="#C8FF24"/>
+  <circle cx="570" cy="166" r="32" stroke="#080B0A" stroke-width="8"/>
+  <path d="M636 138H750M636 166H722M636 194H766" stroke="#080B0A" stroke-width="10"/>
+  <rect x="210" y="320" width="480" height="120" fill="#E8E8DF"/>
+  <path d="M260 380H640" stroke="#080B0A" stroke-width="12"/>
+  <path d="M292 344V416M450 344V416M608 344V416" stroke="#080B0A" stroke-opacity=".4" stroke-width="3"/>
+  <path d="M390 166H510M450 232V320" stroke="#C8FF24" stroke-width="10"/>
+  <circle cx="450" cy="166" r="18" fill="#C8FF24"/>
+  <circle cx="450" cy="320" r="18" fill="#C8FF24"/>
+  <text x="90" y="72" fill="#E8E8DF" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="4">RAG / AGENTS / OUTPUTS</text>
+  <text x="90" y="520" fill="#C8FF24" font-family="Consolas, monospace" font-size="18">retrieval -> reasoning -> action</text>
+</svg>

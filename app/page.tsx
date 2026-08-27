@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const projects = [
   {
     index: "01",
@@ -107,6 +109,14 @@ const awards = [
   ["2021", "Taiwan Excellence Award"],
 ];
 
+const visuals = [
+  ["visual-ai-systems.svg", "RAG、Agent 與結構化 AI 工作流視覺圖"],
+  ["visual-pinn-lab.svg", "PINN 科學機器學習視覺圖"],
+  ["visual-creator-music.svg", "創作者工具與音樂系統視覺圖"],
+];
+
+const assetBasePath = process.env.GITHUB_PAGES === "true" ? "/hikari-tsai-portfolio" : "";
+
 export default function Home() {
   return (
     <main>
@@ -150,6 +160,12 @@ export default function Home() {
           <p>不只寫程式。</p>
           <h2>我在技術與創作之間，<br />打造<span>有用、有感、有個性</span>的數位體驗。</h2>
         </div>
+      </section>
+
+      <section className="visual-story shell" aria-label="技術與創作視覺摘要">
+        {visuals.map(([src, alt]) => (
+          <Image key={src} src={`${assetBasePath}/${src}`} alt={alt} width={900} height={560} unoptimized />
+        ))}
       </section>
 
       <section className="experience shell" aria-label="AI 開發經歷">
