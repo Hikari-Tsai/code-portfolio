@@ -146,21 +146,9 @@ export default function Home() {
             我是 Hikari，獨立音樂人、機器學習工程師與資深生成式 AI 研發工程師。
             專注把 AI、創作者工作流與實用軟體，打造成真正能被使用的產品。
           </p>
-          <div className="hero-side">
-            <div className="hero-portrait">
-              <Image
-                src={`${assetBasePath}/hikari-portrait.png`}
-                alt="Hikari Tsai 的生成式個人形象照"
-                width={1536}
-                height={1024}
-                priority
-                unoptimized
-              />
-            </div>
-            <div className="hero-actions">
-              <a className="button primary" href="#work">探索作品 <b>↘</b></a>
-              <a className="button" href="https://www.linkedin.com/in/hikari-tsai/" target="_blank" rel="noreferrer">查看履歷 ↗</a>
-            </div>
+          <div className="hero-actions">
+            <a className="button primary" href="#work">探索作品 <b>↘</b></a>
+            <a className="button" href="https://www.linkedin.com/in/hikari-tsai/" target="_blank" rel="noreferrer">查看履歷 ↗</a>
           </div>
         </div>
         <div className="system-line"><span>TAIPEI / GMT+8</span><span>AI · CODE · MUSIC</span><span>SYSTEM ONLINE</span></div>
