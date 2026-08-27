@@ -1,6 +1,15 @@
 const projects = [
   {
     index: "01",
+    name: "web-pinn",
+    type: "PRIVATE PHYSICS AI",
+    description:
+      "PINN 應用的前端 demo 介面，將物理資訊神經網路工作流整理成清楚、可展示的 Web 體驗。",
+    stack: ["HTML", "PINN", "Scientific ML"],
+    visibility: "PRIVATE WORK",
+  },
+  {
+    index: "02",
     name: "dc-manager",
     type: "AI × DISCORD",
     description:
@@ -9,7 +18,7 @@ const projects = [
     href: "https://github.com/Hikari-Tsai/dc-manager",
   },
   {
-    index: "02",
+    index: "03",
     name: "twitch-bot",
     type: "CREATOR AI",
     description:
@@ -18,7 +27,7 @@ const projects = [
     href: "https://github.com/Hikari-Tsai/twitch-bot",
   },
   {
-    index: "03",
+    index: "04",
     name: "opencart-newebpay",
     type: "COMMERCE",
     description:
@@ -27,7 +36,7 @@ const projects = [
     href: "https://github.com/Hikari-Tsai/opencart-newebpay",
   },
   {
-    index: "04",
+    index: "05",
     name: "JS_Inflator",
     type: "AUDIO TECH",
     description:
@@ -191,20 +200,33 @@ export default function Home() {
           <p>實作中的技術，才有價值。</p>
         </div>
         <div className="project-list">
-          {projects.map((project) => (
-            <a className="project" href={project.href} target="_blank" rel="noreferrer" key={project.name}>
-              <span className="project-index">{project.index}</span>
-              <div>
-                <small>{project.type}</small>
-                <h3>{project.name}</h3>
-              </div>
-              <p>{project.description}</p>
-              <ul>{project.stack.map((item) => <li key={item}>{item}</li>)}</ul>
-              <b className="arrow">↗</b>
-            </a>
-          ))}
+          {projects.map((project) => {
+            const projectContent = (
+              <>
+                <span className="project-index">{project.index}</span>
+                <div>
+                  <small>{project.type}</small>
+                  <h3>{project.name}</h3>
+                </div>
+                <p>{project.description}</p>
+                <ul>{project.stack.map((item) => <li key={item}>{item}</li>)}</ul>
+              </>
+            );
+
+            return project.href ? (
+              <a className="project" href={project.href} target="_blank" rel="noreferrer" key={project.name}>
+                {projectContent}
+                <b className="arrow">↗</b>
+              </a>
+            ) : (
+              <article className="project project-private" key={project.name}>
+                {projectContent}
+                <b className="arrow">{project.visibility}</b>
+              </article>
+            );
+          })}
         </div>
-        <a className="all-projects" href="https://github.com/Hikari-Tsai?tab=repositories" target="_blank" rel="noreferrer">VIEW ALL 22 REPOSITORIES <span>→</span></a>
+        <a className="all-projects" href="https://github.com/Hikari-Tsai?tab=repositories" target="_blank" rel="noreferrer">VIEW ALL 24 REPOSITORIES <span>→</span></a>
       </section>
 
       <section className="skills shell" id="skills">
