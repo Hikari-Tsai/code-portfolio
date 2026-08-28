@@ -109,17 +109,20 @@ const certifications = [
   {
     name: "AWS Certified Solutions Architect – Associate",
     badgeUrl: "https://www.credly.com/badges/406f8ed0-c2f1-48b9-8fef-21bac421a9e8/public_url",
-    imageUrl: "https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/linkedin_thumb_image.png",
+    imageUrl: "aws-solutions-architect-associate.png",
+    description: "具備在 AWS 上設計安全、具韌性、高效能且符合成本效益架構的能力。",
   },
   {
     name: "AWS Certified Machine Learning – Specialty",
     badgeUrl: "https://www.credly.com/badges/b3d97b71-ae01-41a0-bb13-a3bfd11a27ec/public_url",
-    imageUrl: "https://images.credly.com/images/778bde6c-ad1c-4312-ac33-2fa40d50a147/linkedin_thumb_image.png",
+    imageUrl: "aws-machine-learning-specialty.png",
+    description: "具備在 AWS 上建置、訓練、調校及部署機器學習解決方案的專業能力。",
   },
   {
     name: "AWS Certified Data Analytics – Specialty",
     badgeUrl: "https://www.credly.com/badges/354046b5-a2fb-4f22-92a9-eb032d9e1d16/public_url",
-    imageUrl: "https://images.credly.com/images/6430efe4-0ac0-4df6-8f1b-9559d8fcdf27/linkedin_thumb_image.png",
+    imageUrl: "aws-data-analytics-specialty.png",
+    description: "具備以 AWS 資料服務設計、建置、保護及維運分析解決方案的專業能力。",
   },
 ];
 
@@ -244,13 +247,14 @@ export default function Home() {
                 >
                   <span className="cert-index">0{index + 1}</span>
                   <Image
-                    src={certification.imageUrl}
+                    src={`${assetBasePath}/${certification.imageUrl}`}
                     alt={`${certification.name} 證書徽章`}
-                    width={150}
-                    height={150}
+                    width={600}
+                    height={600}
                     unoptimized
                   />
-                  <p>{certification.name}</p>
+                  <h3>{certification.name}</h3>
+                  <p>{certification.description}</p>
                   <small>VERIFY ON CREDLY ↗</small>
                 </a>
               ))}
