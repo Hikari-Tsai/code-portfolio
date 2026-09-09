@@ -1,3 +1,6 @@
+import CoreScene from "./core-scene";
+import Image from "next/image";
+
 const projects = [
   {
     index: "01",
@@ -86,10 +89,12 @@ const experience = [
 ];
 
 const certifications = [
-  "AWS Certified Data Analytics – Specialty",
-  "AWS Certified Machine Learning – Specialty",
-  "AWS Certified Solutions Architect – Associate",
+  { name: "AWS Certified Data Analytics – Specialty", image: "aws-data-analytics-specialty.png", slug: "aws-certified-data-analytics-specialty" },
+  { name: "AWS Certified Machine Learning – Specialty", image: "aws-machine-learning-specialty.png", slug: "aws-certified-machine-learning-specialty" },
+  { name: "AWS Certified Solutions Architect – Associate", image: "aws-solutions-architect-associate.png", slug: "aws-certified-solutions-architect-associate" },
 ];
+
+const assetBase = process.env.GITHUB_PAGES === "true" ? "/hikari-tsai-portfolio" : "";
 
 const awards = [
   ["2024", "National Dong Hwa University Distinguished Alumnus"],
@@ -116,7 +121,9 @@ export default function Home() {
       </header>
 
       <section className="hero shell" id="top">
+        <CoreScene />
         <div className="eyebrow"><span>01</span> CREATOR · ENGINEER · BUILDER</div>
+        <div className="hero-name">HIKARI TSAI <span>AI ENGINEER × CREATIVE TECHNOLOGIST</span></div>
         <h1>
           I BUILD <em>INTELLIGENT</em>
           <br />TOOLS FOR THE
@@ -175,10 +182,15 @@ export default function Home() {
             </div>
           </div>
           <div className="credential-column cert-column">
-            <div className="credential-title"><span>C</span><h2>CERTIFI-<br />CATIONS</h2></div>
+            <div className="credential-title"><span>C</span><h2>CERTIFICATIONS</h2></div>
             <ol>
               {certifications.map((certification, index) => (
-                <li key={certification}><span>0{index + 1}</span><p>{certification}</p></li>
+                <li key={certification.name}>
+                  <a className="certification-card" href={`https://www.credly.com/org/amazon-web-services/badge/${certification.slug}`} target="_blank" rel="noreferrer" aria-label={`${certification.name} — 查看 AWS 認證介紹`}>
+                    <Image src={`${assetBase}/badges/${certification.image}`} alt="" width={104} height={104} unoptimized className="certification-badge" />
+                    <div><small>AWS CERTIFICATION / 0{index + 1}</small><p>{certification.name}</p><span className="certification-link">認證介紹 ↗</span></div>
+                  </a>
+                </li>
               ))}
             </ol>
           </div>
