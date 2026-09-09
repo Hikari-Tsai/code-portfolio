@@ -1,9 +1,26 @@
-import CoreScene from "./core-scene";
 import Image from "next/image";
 
 const projects = [
   {
     index: "01",
+    name: "web-pinn",
+    type: "PRIVATE PHYSICS AI",
+    description:
+      "PINN 應用的前端 demo 介面，將物理資訊神經網路工作流整理成清楚、可展示的 Web 體驗。",
+    stack: ["HTML", "PINN", "Scientific ML"],
+    visibility: "PRIVATE WORK",
+  },
+  {
+    index: "02",
+    name: "rag",
+    type: "PRIVATE KNOWLEDGE AI",
+    description:
+      "企業知識檢索增強生成系統，整合文件處理、語意搜尋與 LLM 回答流程，將內部資料轉化為可追溯的 AI 問答體驗。",
+    stack: ["Python", "RAG", "LLM"],
+    visibility: "PRIVATE REPO",
+  },
+  {
+    index: "03",
     name: "dc-manager",
     type: "AI × DISCORD",
     description:
@@ -12,7 +29,7 @@ const projects = [
     href: "https://github.com/Hikari-Tsai/dc-manager",
   },
   {
-    index: "02",
+    index: "04",
     name: "twitch-bot",
     type: "CREATOR AI",
     description:
@@ -21,7 +38,7 @@ const projects = [
     href: "https://github.com/Hikari-Tsai/twitch-bot",
   },
   {
-    index: "03",
+    index: "05",
     name: "opencart-newebpay",
     type: "COMMERCE",
     description:
@@ -30,7 +47,7 @@ const projects = [
     href: "https://github.com/Hikari-Tsai/opencart-newebpay",
   },
   {
-    index: "04",
+    index: "06",
     name: "JS_Inflator",
     type: "AUDIO TECH",
     description:
@@ -89,12 +106,25 @@ const experience = [
 ];
 
 const certifications = [
-  { name: "AWS Certified Data Analytics – Specialty", image: "aws-data-analytics-specialty.png", slug: "aws-certified-data-analytics-specialty" },
-  { name: "AWS Certified Machine Learning – Specialty", image: "aws-machine-learning-specialty.png", slug: "aws-certified-machine-learning-specialty" },
-  { name: "AWS Certified Solutions Architect – Associate", image: "aws-solutions-architect-associate.png", slug: "aws-certified-solutions-architect-associate" },
+  {
+    name: "AWS Certified Solutions Architect – Associate",
+    badgeUrl: "https://www.credly.com/badges/406f8ed0-c2f1-48b9-8fef-21bac421a9e8/public_url",
+    imageUrl: "aws-solutions-architect-associate.png",
+    description: "具備在 AWS 上設計安全、具韌性、高效能且符合成本效益架構的能力。",
+  },
+  {
+    name: "AWS Certified Machine Learning – Specialty",
+    badgeUrl: "https://www.credly.com/badges/b3d97b71-ae01-41a0-bb13-a3bfd11a27ec/public_url",
+    imageUrl: "aws-machine-learning-specialty.png",
+    description: "具備在 AWS 上建置、訓練、調校及部署機器學習解決方案的專業能力。",
+  },
+  {
+    name: "AWS Certified Data Analytics – Specialty",
+    badgeUrl: "https://www.credly.com/badges/354046b5-a2fb-4f22-92a9-eb032d9e1d16/public_url",
+    imageUrl: "aws-data-analytics-specialty.png",
+    description: "具備以 AWS 資料服務設計、建置、保護及維運分析解決方案的專業能力。",
+  },
 ];
-
-const assetBase = process.env.GITHUB_PAGES === "true" ? "/code-portfolio" : "";
 
 const awards = [
   ["2024", "National Dong Hwa University Distinguished Alumnus"],
@@ -102,6 +132,14 @@ const awards = [
   ["2022", "CES Innovation Award"],
   ["2021", "Taiwan Excellence Award"],
 ];
+
+const visuals = [
+  ["visual-ai-systems.svg", "RAG、Agent 與結構化 AI 工作流視覺圖"],
+  ["visual-pinn-lab.svg", "PINN 科學機器學習視覺圖"],
+  ["visual-creator-music.svg", "創作者工具與音樂系統視覺圖"],
+];
+
+const assetBasePath = process.env.GITHUB_PAGES === "true" ? "/code-portfolio" : "";
 
 export default function Home() {
   return (
@@ -121,9 +159,17 @@ export default function Home() {
       </header>
 
       <section className="hero shell" id="top">
-        <CoreScene />
+        <Image
+          className="hero-banner"
+          src={`${assetBasePath}/hikari-tech-banner.webp`}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          aria-hidden="true"
+          unoptimized
+        />
         <div className="eyebrow"><span>01</span> CREATOR · ENGINEER · BUILDER</div>
-        <div className="hero-name">HIKARI TSAI <span>AI ENGINEER × CREATIVE TECHNOLOGIST</span></div>
         <h1>
           I BUILD <em>INTELLIGENT</em>
           <br />TOOLS FOR THE
@@ -148,6 +194,12 @@ export default function Home() {
           <p>不只寫程式。</p>
           <h2>我在技術與創作之間，<br />打造<span>有用、有感、有個性</span>的數位體驗。</h2>
         </div>
+      </section>
+
+      <section className="visual-story shell" aria-label="技術與創作視覺摘要">
+        {visuals.map(([src, alt]) => (
+          <Image key={src} src={`${assetBasePath}/${src}`} alt={alt} width={900} height={560} unoptimized />
+        ))}
       </section>
 
       <section className="experience shell" aria-label="AI 開發經歷">
@@ -182,17 +234,31 @@ export default function Home() {
             </div>
           </div>
           <div className="credential-column cert-column">
-            <div className="credential-title"><span>C</span><h2>CERTIFICATIONS</h2></div>
-            <ol>
+            <div className="credential-title"><span>C</span><h2>CERTIFI-<br />CATIONS</h2></div>
+            <div className="cert-grid">
               {certifications.map((certification, index) => (
-                <li key={certification.name}>
-                  <a className="certification-card" href={`https://www.credly.com/org/amazon-web-services/badge/${certification.slug}`} target="_blank" rel="noreferrer" aria-label={`${certification.name} — 查看 AWS 認證介紹`}>
-                    <Image src={`${assetBase}/badges/${certification.image}`} alt="" width={104} height={104} unoptimized className="certification-badge" />
-                    <div><small>AWS CERTIFICATION / 0{index + 1}</small><p>{certification.name}</p><span className="certification-link">認證介紹 ↗</span></div>
-                  </a>
-                </li>
+                <a
+                  className="cert-card"
+                  href={certification.badgeUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`在 Credly 驗證 ${certification.name}`}
+                  key={certification.name}
+                >
+                  <span className="cert-index">0{index + 1}</span>
+                  <Image
+                    src={`${assetBasePath}/${certification.imageUrl}`}
+                    alt={`${certification.name} 證書徽章`}
+                    width={600}
+                    height={600}
+                    unoptimized
+                  />
+                  <h3>{certification.name}</h3>
+                  <p>{certification.description}</p>
+                  <small>VERIFY ON CREDLY ↗</small>
+                </a>
               ))}
-            </ol>
+            </div>
           </div>
         </div>
       </section>
@@ -203,20 +269,33 @@ export default function Home() {
           <p>實作中的技術，才有價值。</p>
         </div>
         <div className="project-list">
-          {projects.map((project) => (
-            <a className="project" href={project.href} target="_blank" rel="noreferrer" key={project.name}>
-              <span className="project-index">{project.index}</span>
-              <div>
-                <small>{project.type}</small>
-                <h3>{project.name}</h3>
-              </div>
-              <p>{project.description}</p>
-              <ul>{project.stack.map((item) => <li key={item}>{item}</li>)}</ul>
-              <b className="arrow">↗</b>
-            </a>
-          ))}
+          {projects.map((project) => {
+            const projectContent = (
+              <>
+                <span className="project-index">{project.index}</span>
+                <div>
+                  <small>{project.type}</small>
+                  <h3>{project.name}</h3>
+                </div>
+                <p>{project.description}</p>
+                <ul>{project.stack.map((item) => <li key={item}>{item}</li>)}</ul>
+              </>
+            );
+
+            return project.href ? (
+              <a className="project" href={project.href} target="_blank" rel="noreferrer" key={project.name}>
+                {projectContent}
+                <b className="arrow">↗</b>
+              </a>
+            ) : (
+              <article className="project project-private" key={project.name}>
+                {projectContent}
+                <b className="arrow">{project.visibility}</b>
+              </article>
+            );
+          })}
         </div>
-        <a className="all-projects" href="https://github.com/Hikari-Tsai?tab=repositories" target="_blank" rel="noreferrer">VIEW ALL 22 REPOSITORIES <span>→</span></a>
+        <a className="all-projects" href="https://github.com/Hikari-Tsai?tab=repositories" target="_blank" rel="noreferrer">VIEW ALL 24 REPOSITORIES <span>→</span></a>
       </section>
 
       <section className="skills shell" id="skills">
