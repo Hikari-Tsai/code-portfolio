@@ -1,0 +1,17 @@
+<svg width="900" height="560" viewBox="0 0 900 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Creator and music systems visual</title>
+  <desc id="desc">Abstract audio and creator-system visual with waveform, chat blocks, and automation nodes.</desc>
+  <rect width="900" height="560" fill="#C8FF24"/>
+  <rect x="58" y="58" width="784" height="444" fill="#080B0A"/>
+  <path d="M112 306C142 306 142 208 172 208C202 208 202 388 232 388C262 388 262 164 292 164C322 164 322 336 352 336C382 336 382 246 412 246C442 246 442 306 472 306C502 306 502 214 532 214C562 214 562 384 592 384C622 384 622 174 652 174C682 174 682 316 712 316C742 316 742 256 772 256" stroke="#C8FF24" stroke-width="12" stroke-linecap="round"/>
+  <rect x="112" y="104" width="176" height="54" fill="#E8E8DF"/>
+  <rect x="132" y="124" width="92" height="12" fill="#080B0A"/>
+  <rect x="612" y="406" width="176" height="54" fill="#E8E8DF"/>
+  <rect x="632" y="426" width="110" height="12" fill="#080B0A"/>
+  <circle cx="444" cy="110" r="34" fill="#E8E8DF"/>
+  <path d="M444 86V134M420 110H468" stroke="#080B0A" stroke-width="7"/>
+  <circle cx="444" cy="450" r="34" fill="#E8E8DF"/>
+  <path d="M428 450H460M444 434V466" stroke="#080B0A" stroke-width="7"/>
+  <text x="112" y="474" fill="#E8E8DF" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="900" letter-spacing="2">CREATOR SYSTEMS</text>
+  <text x="112" y="510" fill="#C8FF24" font-family="Consolas, monospace" font-size="18">chatbot / svs / music generation</text>
+</svg>

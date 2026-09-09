@@ -1,5 +1,5 @@
 {
-  "name": "hikari-tsai-portfolio",
+  "name": "code-portfolio",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -9,7 +9,8 @@
     "dev": "next dev",
     "build": "GITHUB_PAGES=true next build",
     "start": "next dev",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "npm run build && node --test tests/*.test.mjs"
   },
   "dependencies": {
     "next": "16.2.6",

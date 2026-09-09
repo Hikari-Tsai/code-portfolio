@@ -1,0 +1,21 @@
+<svg width="900" height="560" viewBox="0 0 900 560" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">PINN lab visual</title>
+  <desc id="desc">Scientific machine learning visual with field lines and model checkpoints.</desc>
+  <rect width="900" height="560" fill="#E8E8DF"/>
+  <path d="M0 440C160 364 260 532 430 438C600 344 690 164 900 220" stroke="#080B0A" stroke-width="3"/>
+  <path d="M0 378C178 302 290 456 438 364C586 272 678 96 900 150" stroke="#080B0A" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M0 500C150 432 284 558 446 486C608 414 740 272 900 314" stroke="#080B0A" stroke-opacity=".35" stroke-width="2"/>
+  <g stroke="#080B0A" stroke-opacity=".18">
+    <path d="M90 64V500M180 64V500M270 64V500M360 64V500M450 64V500M540 64V500M630 64V500M720 64V500M810 64V500"/>
+    <path d="M70 100H830M70 180H830M70 260H830M70 340H830M70 420H830"/>
+  </g>
+  <rect x="90" y="72" width="250" height="116" fill="#080B0A"/>
+  <text x="116" y="118" fill="#C8FF24" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="900">PINN</text>
+  <text x="116" y="154" fill="#E8E8DF" font-family="Consolas, monospace" font-size="18">physics + neural fields</text>
+  <circle cx="620" cy="246" r="72" fill="#C8FF24"/>
+  <circle cx="620" cy="246" r="34" fill="#080B0A"/>
+  <circle cx="620" cy="246" r="10" fill="#C8FF24"/>
+  <path d="M620 84V408M458 246H782" stroke="#080B0A" stroke-width="4"/>
+  <rect x="538" y="390" width="245" height="74" fill="#080B0A"/>
+  <text x="566" y="436" fill="#E8E8DF" font-family="Consolas, monospace" font-size="18">loss = data + PDE</text>
+</svg>

@@ -1,4 +1,4 @@
-# Hikari Tsai Portfolio
+# Code Portfolio
 
 Personal portfolio for Hikari Tsai, an AI engineer and creative technologist working across generative AI, Physics AI, RAG, AIoT, music generation, singing voice synthesis, and software products.
 
