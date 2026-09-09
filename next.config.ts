@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
   ...(isGitHubPages
     ? {
         output: "export" as const,
-        basePath: "/hikari-tsai-portfolio",
-        assetPrefix: "/hikari-tsai-portfolio",
+        basePath: "/code-portfolio",
+        assetPrefix: "/code-portfolio",
         trailingSlash: true,
         typescript: { ignoreBuildErrors: true },
       }

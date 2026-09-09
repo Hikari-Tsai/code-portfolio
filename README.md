@@ -4,7 +4,7 @@ Personal portfolio for Hikari Tsai, an AI engineer and creative technologist wor
 
 ## Live Site
 
-[https://hikari-tsai.github.io/hikari-tsai-portfolio/](https://hikari-tsai.github.io/hikari-tsai-portfolio/)
+[https://hikari-tsai.github.io/code-portfolio/](https://hikari-tsai.github.io/code-portfolio/)
 
 ## Tech Stack
 

@@ -94,7 +94,7 @@ const certifications = [
   { name: "AWS Certified Solutions Architect – Associate", image: "aws-solutions-architect-associate.png", slug: "aws-certified-solutions-architect-associate" },
 ];
 
-const assetBase = process.env.GITHUB_PAGES === "true" ? "/hikari-tsai-portfolio" : "";
+const assetBase = process.env.GITHUB_PAGES === "true" ? "/code-portfolio" : "";
 
 const awards = [
   ["2024", "National Dong Hwa University Distinguished Alumnus"],
