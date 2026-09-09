@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 const title = "Hikari Tsai — AI Engineer & Creative Technologist";
 const description = "Hikari Tsai 的個人作品集：Physics AI、RAG、AIoT、Music Gen、SVS 歌聲合成、電商金流與 AWS 專業認證。開放求職與專案合作。";
@@ -26,5 +22,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="zh-Hant"><body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body></html>;
+  return <html lang="zh-Hant"><body>{children}</body></html>;
 }
