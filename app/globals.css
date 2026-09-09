@@ -46,3 +46,19 @@
 .project-private .arrow{font:8px/1.6 var(--font-geist-mono);letter-spacing:.5px}
 @media(max-width:1000px){.cert-card{grid-template-columns:84px minmax(0,1fr);column-gap:16px}.cert-card img{width:84px;height:84px}.project-private{grid-template-columns:24px 1fr 1fr 70px}}
 @media(max-width:640px){.cert-card{grid-template-columns:90px minmax(0,1fr);column-gap:18px}.cert-card img{width:90px;height:90px}.cert-card h3{font-size:13px}.project-private{grid-template-columns:22px 1fr 70px}}
+.music-scene{overflow:visible}
+.music-scene canvas{top:5%;height:74%;border-radius:0;mask-image:none;cursor:crosshair}
+.music-scene canvas:active{cursor:crosshair}
+.music-scene .scene-top,.music-scene .scene-bottom{left:3%;right:3%}
+.music-scene .scene-top{top:0;gap:12px}
+.scene-mode{font-size:8px;color:#74767a;letter-spacing:.8px}
+.music-scene .scene-bottom{bottom:0}
+.music-tracks{position:absolute;inset:auto 3% 13%;display:flex;gap:6px;z-index:2}
+.music-tracks button{display:flex;align-items:center;gap:7px;min-height:44px;padding:8px 10px;background:#101113;border:1px solid #ffffff18;color:#b9b4af;font:10px var(--font-geist-mono);cursor:pointer;transition:border-color .2s,background .2s}
+.music-tracks button i{width:5px;height:5px;background:#ff895b;box-shadow:0 0 8px #ff895b40}
+.music-tracks button:nth-child(2) i{background:#ffdbab}.music-tracks button:nth-child(3) i{background:#d94a21}
+.music-tracks button span{font-size:8px;color:#777}.music-tracks button small{display:none}
+.music-tracks button:hover,.music-tracks button[aria-pressed=true]{border-color:#ff895b77;background:#261912;color:#ffe5d5}
+.music-tracks button:disabled{opacity:.4;cursor:default}
+@media(min-width:1200px){.music-tracks button small{display:inline;font-size:8px;color:#8c817b}.music-tracks{gap:8px}}
+@media(max-width:640px){.music-scene{height:390px}.music-scene .scene-top,.music-scene .scene-bottom{left:6%;right:6%}.music-tracks{left:6%;right:6%;bottom:14%;justify-content:center}.music-scene .scene-bottom small{font-size:7px;letter-spacing:.4px}}
