@@ -1,3 +1,4 @@
+import CoreScene from "./core-scene";
 import Image from "next/image";
 
 const projects = [
@@ -133,12 +134,6 @@ const awards = [
   ["2021", "Taiwan Excellence Award"],
 ];
 
-const visuals = [
-  ["visual-ai-systems.svg", "RAG、Agent 與結構化 AI 工作流視覺圖"],
-  ["visual-pinn-lab.svg", "PINN 科學機器學習視覺圖"],
-  ["visual-creator-music.svg", "創作者工具與音樂系統視覺圖"],
-];
-
 const assetBasePath = process.env.GITHUB_PAGES === "true" ? "/code-portfolio" : "";
 
 export default function Home() {
@@ -159,17 +154,9 @@ export default function Home() {
       </header>
 
       <section className="hero shell" id="top">
-        <Image
-          className="hero-banner"
-          src={`${assetBasePath}/hikari-tech-banner.webp`}
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          aria-hidden="true"
-          unoptimized
-        />
+        <CoreScene />
         <div className="eyebrow"><span>01</span> CREATOR · ENGINEER · BUILDER</div>
+        <div className="hero-name">HIKARI TSAI <span>AI ENGINEER × CREATIVE TECHNOLOGIST</span></div>
         <h1>
           I BUILD <em>INTELLIGENT</em>
           <br />TOOLS FOR THE
@@ -194,12 +181,6 @@ export default function Home() {
           <p>不只寫程式。</p>
           <h2>我在技術與創作之間，<br />打造<span>有用、有感、有個性</span>的數位體驗。</h2>
         </div>
-      </section>
-
-      <section className="visual-story shell" aria-label="技術與創作視覺摘要">
-        {visuals.map(([src, alt]) => (
-          <Image key={src} src={`${assetBasePath}/${src}`} alt={alt} width={900} height={560} unoptimized />
-        ))}
       </section>
 
       <section className="experience shell" aria-label="AI 開發經歷">
@@ -234,7 +215,7 @@ export default function Home() {
             </div>
           </div>
           <div className="credential-column cert-column">
-            <div className="credential-title"><span>C</span><h2>CERTIFI-<br />CATIONS</h2></div>
+            <div className="credential-title"><span>C</span><h2>CERTIFICATIONS</h2></div>
             <div className="cert-grid">
               {certifications.map((certification, index) => (
                 <a
