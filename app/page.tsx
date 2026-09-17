@@ -4,105 +4,144 @@ import Image from "next/image";
 const projects = [
   {
     index: "01",
+    name: "music-detection",
+    type: "MUSIC ANALYSIS · KEY & TEMPO",
+    description:
+      "整合 Beat This! 與 S-KEY，透過瀏覽器 ONNX 或本機 Python 分析 BPM、拍號與調性。支援片段選取、波形試聽及 MIDI Tempo 匯出，將分析結果接進 DAW 製作流程。",
+    stack: ["ONNX", "WebGPU / WASM", "Python", "MIDI"],
+    href: "https://github.com/Hikari-Tsai/music-detection",
+  },
+  {
+    index: "02",
+    name: "JS_Inflator",
+    type: "AUDIO DSP · CUSTOMIZED FORK",
+    description:
+      "基於 JS Inflator 開源音訊效果器，開發 AAX 適配、修復電表與介面同步，建立 macOS／Windows 多格式建置與回歸測試。AAX 仍為測試版，僅適用 Pro Tools Developer。",
+    stack: ["C++", "VST3 / AUv2 / AAX", "VSTGUI", "CMake"],
+    href: "https://github.com/Hikari-Tsai/JS_Inflator",
+  },
+  {
+    index: "03",
+    name: "auto-mr",
+    type: "DEVELOPER AUTOMATION",
+    description:
+      "集中管理多個 GitHub 專案的 staging → main 流程，自動建立或沿用 PR，依各專案的 CI、review 與分支保護條件推進合併。",
+    stack: ["TypeScript", "GitHub API", "GitHub Actions"],
+    href: "https://github.com/Hikari-Tsai/auto-mr",
+  },
+  {
+    index: "04",
     name: "web-pinn",
     type: "PRIVATE PHYSICS AI",
     description:
-      "PINN 應用的前端 demo 介面，將物理資訊神經網路工作流整理成清楚、可展示的 Web 體驗。",
+      "為物理資訊神經網路（PINN）應用開發前端展示介面，整理模型操作與結果呈現流程。",
     stack: ["HTML", "PINN", "Scientific ML"],
     visibility: "PRIVATE WORK",
   },
   {
-    index: "02",
+    index: "05",
     name: "rag",
     type: "PRIVATE KNOWLEDGE AI",
     description:
-      "企業知識檢索增強生成系統，整合文件處理、語意搜尋與 LLM 回答流程，將內部資料轉化為可追溯的 AI 問答體驗。",
+      "整合文件處理、語意搜尋與 LLM 回答流程，讓企業內部知識可供檢索，並保留回答的來源脈絡。",
     stack: ["Python", "RAG", "LLM"],
     visibility: "PRIVATE REPO",
   },
   {
-    index: "03",
+    index: "06",
     name: "dc-manager",
     type: "AI × DISCORD",
     description:
-      "Discord 頻道數據分析與 AI 內容審核機器人，支援繁體中文互動，讓社群營運更有效率。",
+      "以 LLM 協助 Discord 內容審核、話題整理與頻道分析，支援繁體中文的社群管理流程。",
     stack: ["Python", "LLM", "Discord API"],
     href: "https://github.com/Hikari-Tsai/dc-manager",
   },
   {
-    index: "04",
+    index: "07",
     name: "twitch-bot",
     type: "CREATOR AI",
     description:
-      "以大型語言模型學習實況主個性，自動回覆 Twitch 聊天室留言，探索 AI 與創作者體驗的交集。",
+      "以 LLM 與實況主人設設定回覆 Twitch 聊天室，結合對話脈絡、回覆規則與冷卻控制，支援直播互動。",
     stack: ["Python", "LLM", "Twitch"],
     href: "https://github.com/Hikari-Tsai/twitch-bot",
   },
   {
-    index: "05",
+    index: "08",
     name: "opencart-newebpay",
     type: "COMMERCE",
     description:
-      "整合藍新金流的 OpenCart 支付模組，將真實商務需求轉化為穩定、可維護的後端流程。",
+      "開發 OpenCart 藍新金流支付模組，串接購物網站的付款流程與交易回應。",
     stack: ["PHP", "OpenCart", "Payment API"],
     href: "https://github.com/Hikari-Tsai/opencart-newebpay",
-  },
-  {
-    index: "06",
-    name: "JS_Inflator",
-    type: "AUDIO TECH",
-    description:
-      "音訊外掛與建置系統實驗，涵蓋 macOS、C++ 與 VST 類型開發工作。",
-    stack: ["C++", "DSP", "macOS"],
-    href: "https://github.com/Hikari-Tsai/JS_Inflator",
   },
 ];
 
 const skills = [
+  ["AUDIO & DSP", "C++ 音訊處理、oversampling、相位與重取樣、參數／電表同步、DSP 回歸測試"],
+  ["MUSIC ANALYSIS", "BPM、拍點與調性分析、頻譜前處理、MIDI Tempo、ONNX、WebGPU / WASM"],
+  ["MUSIC & VOICE AI", "符號音樂生成、可編輯多軌音樂、SVS 歌聲合成、模型訓練與音樂製作流程"],
   ["AI ENGINEERING", "PINN、PhysicsNeMo、RAG、LLM 應用、AI Agent、機器學習"],
-  ["CREATOR SYSTEMS", "VTuber 工具、社群內容流程、Discord / Twitch Bot"],
-  ["WEB & AUTOMATION", "TypeScript、JavaScript、Python、GitHub Actions"],
-  ["COMMERCE", "OpenCart 擴充、金流串接、營運自動化"],
-  ["AUDIO TECH", "C++、Swift、macOS、音訊外掛與 DSP 實驗"],
-  ["AIoT", "智慧音箱、AI 服務整合、連網裝置與互動體驗"],
+  ["AUDIO PLUG-INS", "VST3、AUv2、AAX 適配、VSTGUI、CMake、macOS Universal／Windows 建置"],
+  ["WEB & AUTOMATION", "TypeScript、JavaScript、Python、FastAPI、Web Worker、GitHub Actions 與 PR 自動化"],
+  ["CREATOR SYSTEMS", "獨立音樂創作、藝人／VTuber 合作、Discord / Twitch Bot、社群互動工具"],
+  ["COMMERCE", "OpenCart 模組、藍新金流串接、購物車與後台營運流程"],
+  ["AIoT", "智慧音箱、嬰兒哭聲辨識、聲音事件與裝置動作整合"],
 ];
 
 const experience = [
   {
+    code: "MUSIC_ANALYSIS",
+    title: "音樂分析與瀏覽器推論",
+    description: "將 Beat This! 與 S-KEY 整合為 ONNX 雙模型分析工具，處理音訊前處理、Web Worker 推論與模型快取。支援全曲或片段分析，輸出固定／變速 MIDI Tempo；瀏覽器模式的音訊留在使用者裝置。",
+    tags: ["Music Information Retrieval", "ONNX", "MIDI Tempo"],
+  },
+  {
+    code: "AUDIO_DSP",
+    title: "音訊 DSP 與外掛整合",
+    description: "在 JS Inflator 開源核心上進行 AAX 適配，處理參數、電表與 editor 同步。針對含 oversampling、相位切換的音訊處理流程建立回歸測試，並以 CMake／CI 打包 macOS 與 Windows 外掛。",
+    tags: ["C++ / DSP", "AAX Integration", "Audio Regression"],
+  },
+  {
     code: "PHY_AI",
     title: "Physics AI 開發",
-    description: "運用物理資訊神經網路（PINN）與 NVIDIA PhysicsNeMo，將物理定律融入模型訓練與科學運算。",
+    description: "使用 NVIDIA PhysicsNeMo 開發物理資訊神經網路（PINN），將物理條件納入模型訓練，並製作應用展示介面。",
     tags: ["PINN", "PhysicsNeMo", "Scientific ML"],
   },
   {
     code: "KNOWLEDGE",
     title: "RAG 系統開發",
-    description: "建置檢索增強生成流程，串接知識庫、語意搜尋與大型語言模型，提升回答的準確性與可追溯性。",
+    description: "開發文件處理、知識庫檢索與 LLM 回答流程，整理來源脈絡，讓使用者能核對生成內容的依據。",
     tags: ["RAG", "Vector Search", "LLM"],
   },
   {
     code: "EDGE_AI",
     title: "CES 獲獎 AIoT 智慧音箱",
-    description: "開發 CES Innovation Award 獲獎智慧音箱，透過 AI 偵測與識別嬰兒哭聲，判斷需求並觸發對應的裝置動作與照護回應。",
+    description: "參與 CES Innovation Award 獲獎智慧音箱開發，以 AI 偵測與識別嬰兒哭聲，並觸發對應的裝置動作。",
     tags: ["CES Award", "Cry Recognition", "Smart Speaker"],
   },
   {
     code: "MUSIC_GEN",
     title: "Music Gen 模型",
-    description: "開發符號表象音樂生成模型，自動創作具結構的音樂內容，並支援後續編輯與多軌分軌工作流。",
+    description: "開發符號表象的音樂生成模型，讓生成結果保留可編輯的音樂結構，並支援多軌分軌，供後續編曲與製作使用。",
     tags: ["Music Generation", "Symbolic Music", "Multi-track"],
   },
   {
     code: "SVS",
     title: "SVS 歌聲合成",
-    description: "開發 Singing Voice Synthesizer，涵蓋資料準備、模型訓練、系統開發與實際應用；曾與 Kimberly、黃明志、芒果醬、VERBAL（m-flo）及 VTuber 多帕合作。",
+    description: "開發 Singing Voice Synthesizer，負責資料準備、模型訓練與應用整合。曾與 Kimberly、黃明志、芒果醬、VERBAL（m-flo）及 VTuber 多帕合作開發。",
     tags: ["Singing Voice", "Model Training", "Artist Collaboration"],
   },
   {
     code: "E_COMMERCE",
     title: "OpenCart 電商與金流",
-    description: "以 OpenCart 為核心架設購物車網站與金流系統，開發客製化電商模組，串接交易、物流與後台營運流程。",
+    description: "以 OpenCart 架設購物網站並開發客製模組，串接藍新金流，以及物流匯出與後台營運流程。",
     tags: ["OpenCart", "Payment Gateway", "E-commerce Module"],
+  },
+  {
+    code: "DEV_AUTOMATION",
+    title: "CI 與多專案發佈自動化",
+    description: "開發 auto-mr，集中檢查多個專案的 staging 與 main 差異，自動建立 PR 並等待既有 CI 與審查條件。另為音訊外掛建立跨平台建置、封裝驗證與測試版發佈流程。",
+    tags: ["GitHub Actions", "TypeScript", "Release Engineering"],
   },
 ];
 
@@ -155,17 +194,17 @@ export default function Home() {
 
       <section className="hero shell" id="top">
         <CoreScene />
-        <div className="eyebrow"><span>01</span> CREATOR · ENGINEER · BUILDER</div>
-        <div className="hero-name">HIKARI TSAI <span>AI ENGINEER × CREATIVE TECHNOLOGIST</span></div>
+        <div className="eyebrow"><span>01</span> AI · AUDIO DSP · MUSIC</div>
+        <div className="hero-name">HIKARI TSAI <span>AI & AUDIO ENGINEER · INDEPENDENT MUSICIAN</span></div>
         <h1>
-          I BUILD <em>INTELLIGENT</em>
-          <br />TOOLS FOR THE
-          <br /><span className="outline">CREATOR ERA.</span>
+          I BUILD <em>AI & AUDIO</em>
+          <br />TOOLS FOR
+          <br /><span className="outline">MUSIC.</span>
         </h1>
         <div className="hero-bottom">
           <p>
-            我是 Hikari，獨立音樂人、機器學習工程師與資深生成式 AI 研發工程師。
-            專注把 AI、創作者工作流與實用軟體，打造成真正能被使用的產品。
+            我是 Hikari，獨立音樂人與資深生成式 AI 研發工程師。
+            我的專長是歌聲合成、音樂生成、音訊分析與 DSP 外掛開發，讓模型與訊號處理接進實際的音樂製作流程。
           </p>
           <div className="hero-actions">
             <a className="button primary" href="#work">探索作品 <b>↘</b></a>
@@ -178,15 +217,15 @@ export default function Home() {
       <section className="manifesto shell" aria-label="專業定位">
         <div className="section-label"><span>02</span> FIELD NOTES</div>
         <div className="manifesto-copy">
-          <p>不只寫程式。</p>
-          <h2>我在技術與創作之間，<br />打造<span>有用、有感、有個性</span>的數位體驗。</h2>
+          <p>用音樂人的經驗，思考軟體怎麼被使用。</p>
+          <h2>寫模型，也做音樂。<br />關注<span>聲音處理與創作流程</span>的每個環節。</h2>
         </div>
       </section>
 
-      <section className="experience shell" aria-label="AI 開發經歷">
+      <section className="experience shell" aria-label="AI、音訊與音樂開發經歷">
         <div className="section-head">
-          <div className="section-label"><span>03</span> APPLIED AI EXPERIENCE</div>
-          <p>從模型、知識到裝置端。</p>
+          <div className="section-label"><span>03</span> AUDIO, MUSIC & AI EXPERIENCE</div>
+          <p>模型訓練、音訊軟體與產品整合。</p>
         </div>
         <div className="experience-grid">
           {experience.map((item, index) => (
@@ -247,7 +286,7 @@ export default function Home() {
       <section className="work shell" id="work">
         <div className="section-head">
           <div className="section-label"><span>05</span> SELECTED WORK</div>
-          <p>實作中的技術，才有價值。</p>
+          <p>近期音樂工具與持續維護的工程專案。</p>
         </div>
         <div className="project-list">
           {projects.map((project) => {
@@ -276,14 +315,14 @@ export default function Home() {
             );
           })}
         </div>
-        <a className="all-projects" href="https://github.com/Hikari-Tsai?tab=repositories" target="_blank" rel="noreferrer">VIEW ALL 24 REPOSITORIES <span>→</span></a>
+        <a className="all-projects" href="https://github.com/Hikari-Tsai?tab=repositories" target="_blank" rel="noreferrer">VIEW ALL REPOSITORIES <span>→</span></a>
       </section>
 
       <section className="skills shell" id="skills">
         <div className="section-label light"><span>06</span> CAPABILITIES</div>
         <div className="skills-intro">
-          <h2>FROM IDEA<br />TO <i>WORKING</i><br />SYSTEM.</h2>
-          <p>跨越 AI、軟體與創作者生態，把模糊需求整理成能上線、能維護、能成長的產品。</p>
+          <h2>AUDIO.<br /><i>MUSIC.</i><br />ENGINEERING.</h2>
+          <p>從 C++ 音訊處理、Python 模型到瀏覽器推論，我關心的不只是輸出結果，也包括操作方式、測試與部署。音樂創作經驗讓我能理解製作端的需求，AI 與軟體工程則是把需求做出來的方法。</p>
         </div>
         <div className="skill-grid">
           {skills.map(([title, text], index) => (
@@ -294,17 +333,18 @@ export default function Home() {
 
       <section className="contact shell" id="contact">
         <div className="section-label"><span>07</span> START A CONVERSATION</div>
-        <h2>有一個值得實現的<br /><span>IDEA?</span></h2>
-        <p>目前開放軟體開發、AI 整合、創作者工具與技術顧問合作。</p>
+        <h2>一起開發下一個<br /><span>MUSIC TOOL.</span></h2>
+        <p>開放 AI／音訊軟體相關職缺與專案合作：音樂分析、歌聲合成、DSP 外掛、模型部署，也承接 RAG 與創作者工具開發。</p>
         <div className="contact-links">
           <a className="button primary" href="https://www.linkedin.com/in/hikari-tsai/" target="_blank" rel="noreferrer">在 LinkedIn 聯絡我 <b>↗</b></a>
           <a className="button dark" href="https://github.com/Hikari-Tsai" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a className="button" href="https://hikari-tsai.github.io/homepage/" target="_blank" rel="noreferrer">音樂作品 ↗</a>
         </div>
       </section>
 
       <footer className="shell">
         <a className="brand" href="#top">HIKARI<span>_</span>TSAI</a>
-        <p>AI ENGINEER × CREATIVE TECHNOLOGIST</p>
+        <p>AI & AUDIO ENGINEER · INDEPENDENT MUSICIAN</p>
         <p>© 2026 HIKARI TSAI</p>
       </footer>
     </main>

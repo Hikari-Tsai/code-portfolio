@@ -62,3 +62,5 @@
 .music-tracks button:disabled{opacity:.4;cursor:default}
 @media(min-width:1200px){.music-tracks button small{display:inline;font-size:8px;color:#8c817b}.music-tracks{gap:8px}}
 @media(max-width:640px){.music-scene{height:390px}.music-scene .scene-top,.music-scene .scene-bottom{left:6%;right:6%}.music-tracks{left:6%;right:6%;bottom:14%;justify-content:center}.music-scene .scene-bottom small{font-size:7px;letter-spacing:.4px}}
+.skills-intro>*{min-width:0}
+@media(max-width:640px){.skills-intro h2{font-size:clamp(38px,11.5vw,58px)}}
