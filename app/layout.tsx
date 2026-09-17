@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const title = "Hikari Tsai — AI Engineer & Creative Technologist";
-const description = "Hikari Tsai 的個人作品集：Physics AI、RAG、AIoT、Music Gen、SVS 歌聲合成、電商金流與 AWS 專業認證。開放求職與專案合作。";
+const title = "Hikari Tsai — AI, Audio DSP & Music Technology";
+const description = "Hikari Tsai，獨立音樂人與資深生成式 AI 研發工程師。專長為 Audio DSP、音訊外掛、ONNX 音樂分析、Music Gen 與 SVS 歌聲合成，也開發 RAG、Physics AI 與 AIoT 應用。開放求職與接案合作。";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hikari-tsai.github.io/code-portfolio/"),
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title,
     description,
     type: "website",
-    images: [{ url: "https://hikari-tsai.github.io/code-portfolio/og.png", width: 1792, height: 936, alt: "Hikari Tsai — AI Engineer & Creative Technologist" }],
+    images: [{ url: "https://hikari-tsai.github.io/code-portfolio/og.png", width: 1792, height: 936, alt: "Hikari Tsai 個人作品集" }],
   },
   twitter: { card: "summary_large_image", title, description, images: ["https://hikari-tsai.github.io/code-portfolio/og.png"] },
 };
