@@ -1,4 +1,5 @@
 import CoreScene from "./core-scene";
+import AudioLab from "./audio-lab";
 import Image from "next/image";
 
 const projects = [
@@ -334,6 +335,7 @@ export default function Home() {
       <section className="contact shell" id="contact">
         <div className="section-label"><span>07</span> START A CONVERSATION</div>
         <h2>一起開發下一個<br /><span>MUSIC TOOL.</span></h2>
+        <AudioLab />
         <p>開放 AI／音訊軟體相關職缺與專案合作：音樂分析、歌聲合成、DSP 外掛、模型部署，也承接 RAG 與創作者工具開發。</p>
         <div className="contact-links">
           <a className="button primary" href="https://www.linkedin.com/in/hikari-tsai/" target="_blank" rel="noreferrer">在 LinkedIn 聯絡我 <b>↗</b></a>
