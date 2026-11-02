@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 const title = "Hikari Tsai — AI, Audio DSP & Music Technology";
-const description = "Hikari Tsai，獨立音樂人與資深生成式 AI 研發工程師。專長為 Audio DSP、音訊外掛、ONNX 音樂分析、Music Gen 與 SVS 歌聲合成，也開發 RAG、Physics AI 與 AIoT 應用。開放求職與接案合作。";
+const description = "Hikari Tsai，獨立音樂人與資深生成式 AI 研發工程師。開發 TrackMate、Karaoke Battle、音訊 DSP 外掛與本機 ONNX 工具；專長涵蓋 PhysicsNeMo、PIE 物理研究流程、MCP、RAG、Music Gen 與 SVS 歌聲合成。開放求職與接案合作。";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://hikari-tsai.github.io/code-portfolio/"),
