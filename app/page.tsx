@@ -5,24 +5,78 @@ import Image from "next/image";
 const projects = [
   {
     index: "01",
-    name: "music-detection",
-    type: "MUSIC ANALYSIS · KEY & TEMPO",
+    name: "PIE",
+    type: "PHYSICS INFORMS EVERYTHING",
     description:
-      "整合 Beat This! 與 S-KEY，透過瀏覽器 ONNX 或本機 Python 分析 BPM、拍號與調性。支援片段選取、波形試聽及 MIDI Tempo 匯出，將分析結果接進 DAW 製作流程。",
-    stack: ["ONNX", "WebGPU / WASM", "Python", "MIDI"],
-    href: "https://github.com/Hikari-Tsai/music-detection",
+      "以 PhysicsNeMo 與 MCP 串接物理研究流程，協助 AI Agent 整理方程式、查找模型與文獻、處理 CAD／網格輸入，並驗證模型與追蹤實驗。組織內部專案，僅展示已公開的摘要。",
+    stack: ["PhysicsNeMo", "MCP", "Research Skills"],
+    visibility: "PRIVATE WORK",
   },
   {
     index: "02",
+    name: "TrackMate",
+    type: "AI-ASSISTED PRO TOOLS WORKFLOW",
+    description:
+      "結合檔名規則與本機 ONNX 模型辨識 stems，整理軌名、分類與顏色，偵測假立體聲及 BPM。透過 Avid PTSL 匯入 Pro Tools 並核對結果；Windows 已提供建置，仍待實機驗證。",
+    stack: ["Flutter", "Python / ONNX", "Pro Tools PTSL"],
+    href: "https://github.com/Hikari-Tsai/TrackMate",
+  },
+  {
+    index: "03",
+    name: "karaoke-battle",
+    type: "LOCAL MUSIC AI · LIVE PITCH",
+    description:
+      "以 Flutter 與 C++ 原生引擎整合本機人聲分離、旋律轉譜、即時音高及演唱評分，支援音符修正與回放。使用上游預訓練模型，其中 GAME 權重受非商業授權限制。",
+    stack: ["Flutter / Dart", "C++ / FFI", "ONNX Runtime"],
+    href: "https://github.com/Hikari-Tsai/karaoke-battle",
+  },
+  {
+    index: "04",
+    name: "HT-76",
+    type: "FET COMPRESSOR · AUDIO PLUG-IN",
+    description:
+      "基於 JUCE 與開源 fetcomp-dsp 核心開發 1176 風格壓縮器，提供 Rack／Dynamic 介面、電平計量與參數自動化。Rev H 為未經實機校準的實驗模型，AAX 發行與宿主驗證仍有限制。",
+    stack: ["C++ / JUCE", "FET DSP", "VST3 / AU / AAX"],
+    href: "https://github.com/Hikari-Tsai/HT-76",
+  },
+  {
+    index: "05",
+    name: "HT-1B",
+    type: "PHYSICS AI · AUDIO MODELING",
+    description:
+      "研究 CL 1B 縮減電路求解與 PhysicsNeMo 參數辨識，另實作 S4／S6 + Temporal FiLM 神經音訊訓練流程。電路 PINN 與資料驅動模型分開驗證，尚不宣稱整機復刻或即時外掛效能。",
+    stack: ["PhysicsNeMo", "PyTorch", "PINN / SSM"],
+    href: "https://github.com/Hikari-Tsai/HT-1B",
+  },
+  {
+    index: "06",
+    name: "music-detection",
+    type: "MUSIC ANALYSIS · KEY & TEMPO",
+    description:
+      "整合 Beat This!、S-KEY 與 GAME，分析 BPM、拍號、調性與歌聲音高，支援片段試聽及 Tempo + Lead Vocal MIDI 匯出。瀏覽器模式音訊不上傳；GAME 權重限非商業使用。",
+    stack: ["ONNX", "WebGPU / WASM", "Vocal MIDI"],
+    href: "https://github.com/Hikari-Tsai/music-detection",
+  },
+  {
+    index: "07",
     name: "JS_Inflator",
     type: "AUDIO DSP · CUSTOMIZED FORK",
     description:
-      "基於 JS Inflator 開源音訊效果器，開發 AAX 適配、修復電表與介面同步，建立 macOS／Windows 多格式建置與回歸測試。AAX 仍為測試版，僅適用 Pro Tools Developer。",
+      "基於 JS Inflator 開源核心，維護 AAX 適配、音訊電平表同步、跨平台建置與回歸測試。macOS AAX 已通過 PACE 簽章驗證，尚未實測標準版 Pro Tools；Windows 目前提供 VST3。",
     stack: ["C++", "VST3 / AUv2 / AAX", "VSTGUI", "CMake"],
     href: "https://github.com/Hikari-Tsai/JS_Inflator",
   },
   {
-    index: "03",
+    index: "08",
+    name: "ai-interview",
+    type: "RECALL · MULTILINGUAL KNOWLEDGE",
+    description:
+      "將上游面試題庫整理成中、英、日文學習卡，保留原始來源與 AI 輔助解答，透過 GitHub Actions 增量更新。以 Astro／TypeScript 建立靜態網站，支援社群答案與待補內容管理。",
+    stack: ["Astro", "TypeScript", "Structured Outputs"],
+    href: "https://github.com/Hikari-Tsai/ai-interview",
+  },
+  {
+    index: "09",
     name: "auto-mr",
     type: "DEVELOPER AUTOMATION",
     description:
@@ -31,7 +85,7 @@ const projects = [
     href: "https://github.com/Hikari-Tsai/auto-mr",
   },
   {
-    index: "04",
+    index: "10",
     name: "web-pinn",
     type: "PRIVATE PHYSICS AI",
     description:
@@ -40,7 +94,7 @@ const projects = [
     visibility: "PRIVATE WORK",
   },
   {
-    index: "05",
+    index: "11",
     name: "rag",
     type: "PRIVATE KNOWLEDGE AI",
     description:
@@ -49,7 +103,7 @@ const projects = [
     visibility: "PRIVATE REPO",
   },
   {
-    index: "06",
+    index: "12",
     name: "dc-manager",
     type: "AI × DISCORD",
     description:
@@ -58,7 +112,7 @@ const projects = [
     href: "https://github.com/Hikari-Tsai/dc-manager",
   },
   {
-    index: "07",
+    index: "13",
     name: "twitch-bot",
     type: "CREATOR AI",
     description:
@@ -67,7 +121,7 @@ const projects = [
     href: "https://github.com/Hikari-Tsai/twitch-bot",
   },
   {
-    index: "08",
+    index: "14",
     name: "opencart-newebpay",
     type: "COMMERCE",
     description:
@@ -78,11 +132,15 @@ const projects = [
 ];
 
 const skills = [
-  ["AUDIO & DSP", "C++ 音訊處理、oversampling、相位與重取樣、參數／電表同步、DSP 回歸測試"],
-  ["MUSIC ANALYSIS", "BPM、拍點與調性分析、頻譜前處理、MIDI Tempo、ONNX、WebGPU / WASM"],
+  ["AUDIO & DSP", "C++ 音訊處理、FET 壓縮器整合、oversampling、立體聲分析、電平計量與回歸測試"],
+  ["MUSIC ANALYSIS", "人聲分離、旋律轉譜、即時 F0、BPM／調性分析、Tempo + Vocal MIDI、ONNX"],
   ["MUSIC & VOICE AI", "符號音樂生成、可編輯多軌音樂、SVS 歌聲合成、模型訓練與音樂製作流程"],
-  ["AI ENGINEERING", "PINN、PhysicsNeMo、RAG、LLM 應用、AI Agent、機器學習"],
-  ["AUDIO PLUG-INS", "VST3、AUv2、AAX 適配、VSTGUI、CMake、macOS Universal／Windows 建置"],
+  ["PHYSICS & RESEARCH", "PhysicsNeMo、PINN、電路參數辨識、MCP、模型驗證與可追溯研究流程"],
+  ["AUDIO PLUG-INS", "JUCE、VSTGUI、VST3／AU／AAX 整合、CMake、跨平台封裝與簽署驗證"],
+  ["DAW WORKFLOWS", "Pro Tools PTSL、stem 辨識與命名、假立體聲偵測、mono 轉換與 tempo map 匯入"],
+  ["DESKTOP & INFERENCE", "Flutter／Dart、C++ FFI、Python 引擎、ONNX Runtime、本機模型管理與桌面應用封裝"],
+  ["NEURAL AUDIO", "PyTorch、S4／S6 狀態空間模型、Temporal FiLM、有狀態音訊分段與訓練流程實作"],
+  ["KNOWLEDGE SYSTEMS", "RAG、Agent 工作流程、結構化輸出、來源追溯、多語系知識內容與增量更新"],
   ["WEB & AUTOMATION", "TypeScript、JavaScript、Python、FastAPI、Web Worker、GitHub Actions 與 PR 自動化"],
   ["CREATOR SYSTEMS", "獨立音樂創作、藝人／VTuber 合作、Discord / Twitch Bot、社群互動工具"],
   ["COMMERCE", "OpenCart 模組、藍新金流串接、購物車與後台營運流程"],
@@ -91,28 +149,46 @@ const skills = [
 
 const experience = [
   {
+    code: "PIE",
+    title: "PIE 物理研究 Agent",
+    description: "開發 PhysicsNeMo MCP 橋接與研究 Skills，串起物理問題形式化、模型與文獻查找、CAD／網格處理，以及模型驗證與實驗追蹤。此處僅呈現公開自介已揭露的能力範圍。",
+    tags: ["PhysicsNeMo", "MCP", "Research Workflow"],
+  },
+  {
+    code: "DAW_TOOLS",
+    title: "TrackMate 與 Pro Tools 整合",
+    description: "開發 Flutter 桌面介面與 Python 推論引擎，結合規則、文字嵌入與音訊模型辨識音軌。處理立體聲分析、軌名與分類、速度圖匯入，並以 PTSL 讀回結果核對。",
+    tags: ["Flutter / Python", "Local ONNX", "Pro Tools PTSL"],
+  },
+  {
+    code: "LIVE_PITCH",
+    title: "Karaoke Battle 演唱分析",
+    description: "以 Flutter／Dart 與 C++ FFI 整合人聲分離、旋律轉譜及即時音高追蹤。開發演唱評分、移調、音符修正與回放功能，處理本機模型下載、校驗與跨平台封裝。",
+    tags: ["C++ / FFI", "Pitch Tracking", "Source Separation"],
+  },
+  {
     code: "MUSIC_ANALYSIS",
     title: "音樂分析與瀏覽器推論",
-    description: "將 Beat This! 與 S-KEY 整合為 ONNX 雙模型分析工具，處理音訊前處理、Web Worker 推論與模型快取。支援全曲或片段分析，輸出固定／變速 MIDI Tempo；瀏覽器模式的音訊留在使用者裝置。",
-    tags: ["Music Information Retrieval", "ONNX", "MIDI Tempo"],
+    description: "整合 Beat This!、S-KEY 與 GAME，處理 Web Worker 推論、模型來源校驗與快取。支援全曲或片段的節拍、調性與歌聲音高分析，匯出 Tempo／Lead Vocal MIDI；瀏覽器模式音訊不離開裝置。",
+    tags: ["Music Information Retrieval", "WebGPU / WASM", "Vocal MIDI"],
   },
   {
     code: "AUDIO_DSP",
     title: "音訊 DSP 與外掛整合",
-    description: "在 JS Inflator 開源核心上進行 AAX 適配，處理參數、電表與 editor 同步。針對含 oversampling、相位切換的音訊處理流程建立回歸測試，並以 CMake／CI 打包 macOS 與 Windows 外掛。",
-    tags: ["C++ / DSP", "AAX Integration", "Audio Regression"],
+    description: "在 JS Inflator 開源核心上進行 AAX 適配與電平表同步修復；另以 JUCE 與 fetcomp-dsp 開發 HT-76 的 Rack／Dynamic 介面、參數自動化與計量。維護跨平台封裝、簽署驗證及音訊回歸測試。",
+    tags: ["C++ / JUCE", "AAX Integration", "Audio Regression"],
   },
   {
     code: "PHY_AI",
-    title: "Physics AI 開發",
-    description: "使用 NVIDIA PhysicsNeMo 開發物理資訊神經網路（PINN），將物理條件納入模型訓練，並製作應用展示介面。",
-    tags: ["PINN", "PhysicsNeMo", "Scientific ML"],
+    title: "HT-1B 電路與神經音訊建模",
+    description: "以 PhysicsNeMo 研究縮減電路的參數辨識與直接求解，另實作 S4／S6 + Temporal FiLM 的監督式音訊訓練流程。分開處理物理殘差與資料誤差，不將神經模型等同於 PINN，也不把訓練誤差當成實機還原度。",
+    tags: ["PINN / Circuit Solver", "S4 / S6", "Temporal FiLM"],
   },
   {
     code: "KNOWLEDGE",
-    title: "RAG 系統開發",
-    description: "開發文件處理、知識庫檢索與 LLM 回答流程，整理來源脈絡，讓使用者能核對生成內容的依據。",
-    tags: ["RAG", "Vector Search", "LLM"],
+    title: "RAG 與多語系知識工具",
+    description: "開發文件處理、知識檢索與 LLM 回答流程。公開專案 Recall 則將上游面試題庫整理為多語系學習卡，保留來源與社群答案，透過增量更新與內容檢查維護 AI 輔助解答。",
+    tags: ["RAG / Agents", "Structured Outputs", "Astro / TypeScript"],
   },
   {
     code: "EDGE_AI",
@@ -205,7 +281,7 @@ export default function Home() {
         <div className="hero-bottom">
           <p>
             我是 Hikari，獨立音樂人與資深生成式 AI 研發工程師。
-            我的專長是歌聲合成、音樂生成、音訊分析與 DSP 外掛開發，讓模型與訊號處理接進實際的音樂製作流程。
+            開發本機音樂 AI、Pro Tools 工具與 DSP 外掛，也以 PhysicsNeMo、MCP 與研究 Skills 建立可驗證的物理研究流程。
           </p>
           <div className="hero-actions">
             <a className="button primary" href="#work">探索作品 <b>↘</b></a>
@@ -226,12 +302,12 @@ export default function Home() {
       <section className="experience shell" aria-label="AI、音訊與音樂開發經歷">
         <div className="section-head">
           <div className="section-label"><span>03</span> AUDIO, MUSIC & AI EXPERIENCE</div>
-          <p>模型訓練、音訊軟體與產品整合。</p>
+          <p>音訊軟體、本機推論與物理研究工具。</p>
         </div>
         <div className="experience-grid">
           {experience.map((item, index) => (
             <article key={item.code}>
-              <div className="experience-meta"><span>0{index + 1}</span><small>{item.code}</small></div>
+              <div className="experience-meta"><span>{String(index + 1).padStart(2, "0")}</span><small>{item.code}</small></div>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
               <ul>{item.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
@@ -287,7 +363,7 @@ export default function Home() {
       <section className="work shell" id="work">
         <div className="section-head">
           <div className="section-label"><span>05</span> SELECTED WORK</div>
-          <p>近期音樂工具與持續維護的工程專案。</p>
+          <p>近期桌面工具、Physics AI 與持續維護的工程專案。</p>
         </div>
         <div className="project-list">
           {projects.map((project) => {
@@ -323,11 +399,11 @@ export default function Home() {
         <div className="section-label light"><span>06</span> CAPABILITIES</div>
         <div className="skills-intro">
           <h2>AUDIO.<br /><i>MUSIC.</i><br />ENGINEERING.</h2>
-          <p>從 C++ 音訊處理、Python 模型到瀏覽器推論，我關心的不只是輸出結果，也包括操作方式、測試與部署。音樂創作經驗讓我能理解製作端的需求，AI 與軟體工程則是把需求做出來的方法。</p>
+          <p>我用 C++ 處理音訊、以 Flutter 製作桌面工具，將 ONNX 模型接進瀏覽器與 DAW 工作流程。科研應用則結合 PhysicsNeMo、MCP 與實驗追蹤；模型來源、測試條件和未驗證的部分，都需要說清楚。</p>
         </div>
         <div className="skill-grid">
           {skills.map(([title, text], index) => (
-            <article key={title}><span>0{index + 1}</span><h3>{title}</h3><p>{text}</p></article>
+            <article key={title}><span>{String(index + 1).padStart(2, "0")}</span><h3>{title}</h3><p>{text}</p></article>
           ))}
         </div>
       </section>
@@ -336,7 +412,7 @@ export default function Home() {
         <div className="section-label"><span>07</span> START A CONVERSATION</div>
         <h2>一起開發下一個<br /><span>MUSIC TOOL.</span></h2>
         <AudioLab />
-        <p>開放 AI／音訊軟體相關職缺與專案合作：音樂分析、歌聲合成、DSP 外掛、模型部署，也承接 RAG 與創作者工具開發。</p>
+        <p>開放 AI／音訊軟體相關職缺與專案合作：本機音樂 AI、Pro Tools 整合、歌聲合成與 DSP 外掛，也承接 Physics AI、MCP／Agent 與 RAG 工具開發。</p>
         <div className="contact-links">
           <a className="button primary" href="https://www.linkedin.com/in/hikari-tsai/" target="_blank" rel="noreferrer">在 LinkedIn 聯絡我 <b>↗</b></a>
           <a className="button dark" href="https://github.com/Hikari-Tsai" target="_blank" rel="noreferrer">GitHub ↗</a>
